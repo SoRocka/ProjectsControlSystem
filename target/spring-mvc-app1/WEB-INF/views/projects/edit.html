@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit employee</title>
+</head>
+<body>
+
+    <form th:method="PATCH" th:action="@{/projects/{id}(id=${project.getId()})}" th:object="${project}">
+        <label for="name">Name:</label>
+        <input type="text" th:field="*{name}" id="name"/>
+        <div style="color:darkred" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name error</div>
+        <br/>
+        <label for="start_date">Start date:</label>
+        <input type="date" th:field="*{start_date}" id="start_date"/>
+        <div style="color:darkred" th:if="${#fields.hasErrors('start_date')}" th:errors="*{start_date}">Surname error</div>
+        <br/>
+        <label for="end_date">End date:</label>
+        <input type="date" th:field="*{end_date}" id="end_date"/>
+        <div style="color:darkred" th:if="${#fields.hasErrors('end_date')}" th:errors="*{end_date}">End date error</div>
+        <br/>
+        <label for="project_manager_id">Project manager:</label>
+        <input type="date" th:field="*{project_manager_id}" id="project_manager_id"/>
+        <div style="color:darkred" th:if="${#fields.hasErrors('project_manager_id')}" th:errors="*{program_manager_id}">PM error</div>
+        <br/>
+        <label for="business_entity_id">Business entity:</label>
+        <input type="date" th:field="*{business_entity_id}" id="business_entity_id"/>
+        <div style="color:darkred" th:if="${#fields.hasErrors('business_entity_id')}" th:errors="*{business_entity_id}">Business ID error</div>
+        <br/>
+        <label for="currency_id">Currency:</label>
+        <input type="date" th:field="*{currency_id}" id="currency_id"/>
+        <div style="color:darkred" th:if="${#fields.hasErrors('currency_id')}" th:errors="*{currency_id}">Currency ID error</div>
+        <br/>
+        <label for="status_id">Status:</label>
+        <input type="date" th:field="*{status_id}" id="status_id"/>
+        <div style="color:darkred" th:if="${#fields.hasErrors('status_id')}" th:errors="*{status_id}">Status ID error</div>
+        <br/>
+
+
+        <a th:href="@{/employees/{id}(id=${employee.getId()})}">Go back</a>
+        <input type="submit" value="Accept"/>
+    </form>
+
+</body>
+</html>

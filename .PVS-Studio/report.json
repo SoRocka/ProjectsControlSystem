@@ -1,0 +1,40 @@
+{
+  "version": 2,
+  "warnings": [
+    {
+      "code": "Renew",
+      "cwe": 0,
+      "level": 1,
+      "positions": [],
+      "message": "Your license will expire in 30 days. Click \u0027Renew\u0027 to learn more or contact us at support@viva64.com.",
+      "projects": [],
+      "favorite": false,
+      "falseAlarm": false
+    },
+    {
+      "code": "V5305",
+      "cwe": 798,
+      "sastId": "OWASP-2.10.4",
+      "level": 3,
+      "positions": [
+        {
+          "file": "C:\\Repos\\Intelij Projects\\ProjectsControlSystem\\src\\main\\java\\org\\pcs\\config\\SpringConfig.java",
+          "line": 63,
+          "endLine": 63,
+          "column": 32,
+          "endColumn": 37,
+          "navigation": {
+            "previousLine": 565425315,
+            "currentLine": 339894331,
+            "nextLine": 5667357,
+            "columns": 39
+          }
+        }
+      ],
+      "message": "Storing credentials inside source code can lead to security issues.",
+      "projects": [],
+      "favorite": false,
+      "falseAlarm": false
+    }
+  ]
+}
